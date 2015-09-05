@@ -104,6 +104,10 @@ header img {
     margin: 0 auto 20px;
 }
 
+#skills
+{
+    padding-bottom: 30px;
+}
 .skills-bar
 {
     font-size: 15px;
