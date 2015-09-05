@@ -1,0 +1,65 @@
+<!-- Project Information  -->
+<div class="container" id="project-info">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+
+                <!-- Project Picture  -->
+                <div class="col-xs-12 col-sm-3" id="employee-img">
+                    <img class="employee-thumbnail" src="img/{{project.name}}.jpg">
+                </div>
+
+                <!-- Project Details  -->
+                <div class="col-xs-12 col-sm-9" id="project-details">
+                    <h2> {{project.name}}</h2>
+                    <h4> {{project.description}}  </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Contributors and Technologies -->
+<div class="container">
+
+    <div class="row">
+
+        <!-- Contributors -->
+        <div class="col-xs-12 col-sm-6" id="employee-projects">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Contributors</div>
+                <div class="panel-body" id="contributor-panel-body">
+                    <div class="list-group" id="list-group-contributor" ng-repeat="contributor in contributor_data">
+                        <div class="list-group-item">
+                            <div class="row-picture">
+                                <img class="circle" src="{{ contributor.photoUrl  }}" alt="icon">
+                            </div>
+                            <div class="row-content">
+                                <a href="#/person/{{ contributor.name  }}"  > <h4 class="list-group-item-heading">{{  contributor.name  }}</h4> </a>
+                                <p class="list-group-item-text">{{ contributor.startDate }} - {{ contributor.endDate }}</p>
+                            </div>
+                        </div>
+                        <div class="list-group-separator"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Technologies -->
+        <div class="col-xs-12 col-sm-6">
+            <div class="panel panel-default"  id="adjust-width">
+                <div class="panel-heading">Technology</div>
+                <div class="panel-body">
+                    <h5  ng-repeat="object in technologies" class="inline-tags">
+                        <span class="label label-success">{{  object.name  }}</span>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

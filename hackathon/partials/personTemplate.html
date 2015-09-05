@@ -1,0 +1,107 @@
+<!-- Personal Information  -->
+<div class="container" id="employee-info">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <!-- Employee Picture  -->
+                <div class="col-xs-12 col-sm-3" id="employee-img">
+                    <img class="employee-thumbnail" src={{photoUrl}}>
+                </div>
+
+                <!-- Employee Details  -->
+                <div class="col-xs-12 col-sm-9" id="employee-details">
+                    <h2> {{user.name}}</h2>
+                    <h4> {{user.role}} |  <a href="#/department/{{department.name}}"> {{department.name}}  </a> </h4>
+                    <h5> Current Location: <a href="#/office/{{currentOffice.office.name}} ">  {{currentOffice.office.name}} </a> </h5>
+                    <h5><span class="glyphicon glyphicon-envelope"></span> {{user.email}} </h5>
+                    <h5><span class="glyphicon glyphicon-phone-alt"></span> +852 ------ </h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Location and Projects -->
+<div class="container" id="projects-locations">
+
+    <div class="row">
+    <!-- Project History and Team mates -->
+        <div class="col-xs-12 col-sm-6" id="employee-projects">
+
+            <div class="panel panel-default" id="adjust-width">
+                <div class="panel-heading">Worked With</div>
+                <div class="panel-body">
+                    <h5  ng-repeat="colleague in colleagues" class="inline-tags">
+                        <a href="#/person/{{ colleague.name  }}" > <span class="label label-warning">{{  colleague.name  }}</span>  </a>
+                    </h5>
+                </div>
+            </div>
+
+            <div class="panel panel-default" id="adjust-width">
+                <div class="panel-heading">Projects</div>
+                <div class="panel-body">
+                    <h5  ng-repeat="project in projects" class="inline-tags">
+                       <a href="#/project/{{ project.project.name  }}" > <span class="label label-info">{{  project.project.name  }}</span>  </a>
+                    </h5>
+                </div>
+            </div>
+
+        </div>
+        <!-- Work Location History -->
+        <div class="col-xs-12 col-sm-6">
+            <div class="panel panel-default" >
+                <div class="panel-heading">Worked in</div>
+                <div class="panel-body">
+                    <location ng-if="offices"></location>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Skills and badges -->
+<div class="container">
+
+    <div class="row">
+        <!-- Skills -->
+        <div class="col-xs-12 col-sm-6">
+            <div class="panel panel-default" id="adjust-width">
+                <div class="panel-heading">Skills</div>
+                <div class="panel-body">
+                    <h5  ng-repeat="skill in skills" class="inline-tags">
+                       <span class="label label-success">{{  skill.name  }}</span>
+                    </h5>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Badges -->
+        <div class="col-xs-12 col-sm-6">
+            <div class="panel panel-default" id="adjust-width">
+                <div class="panel-heading">Badges</div>
+                <div class="panel-body">
+                    Skills
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Work History Information Timeline JS -->
+<div class="container" id="timeline">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12" id="timeline-js"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

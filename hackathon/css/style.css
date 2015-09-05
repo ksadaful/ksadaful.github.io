@@ -1,0 +1,111 @@
+#graph {
+    width: 900px;
+    height: 600px;
+}
+
+#employee-info
+{
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+
+#graph-component
+{
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+#graph-component form {
+    width: 700px;
+    margin: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+#graph-component form label {
+    margin-right: 20px;
+}
+
+#graph-component form input {
+    margin-right: 50px;
+}
+
+#project-info
+{
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+
+#office-info
+{
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+
+#department-info
+{
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+
+.employee-thumbnail
+{
+	width: 200px; 
+}
+
+#location-map {
+	width	: 100%;
+	height	: 300px;
+}
+
+.background
+{
+	background-color: #F9F9F9;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#employee-skills
+{
+padding-left: 15px;
+padding-right: 15px;
+}
+
+.inline-tags
+{
+	display: inline-block;
+	margin: 5px;
+}
+
+#adjust-width
+{
+	height: 175px;
+}
+
+.inline-tags a
+{
+ 	text-decoration: none; /* no underline */
+}
+
+#contributor-list-group
+{
+	margin: 0px;
+
+}
+
+#single-deparment-employee
+{
+		display: inline;
+}
+
+#list-group-contributor
+{
+	margin: 0px;
+}
+
+#primary-search-box
+{
+    padding-top: 15px;
+}

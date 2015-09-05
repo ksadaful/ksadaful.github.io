@@ -1,0 +1,37 @@
+<!-- Office Information  -->
+<div class="container" id="office-info">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <!-- Department Details  -->
+                <div class="col-xs-12" id="office-details">
+                    <h2> {{office.name}}  </h2>
+                    <h4> International Commerce Center, Hong Kong <a href="{{officeMapUrl}}" target="_blank"> <span class="glyphicon glyphicon-map-marker" ></span> </a> </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Office Employees -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default" ng-repeat="member in officeMembers">
+                <div class="panel-body">
+                    <div class="list-group" id="single-deparment-employee">
+                        <div class="list-group-item">
+                            <div class="row-picture">
+                                <img class="circle" src="{{ member.photoUrl  }}" alt="icon">
+                            </div>
+                            <div class="row-content" >
+                                <a href="#/person/{{ member.name  }}"  > <h4 class="list-group-item-heading">{{  member.name  }}</h4> </a>
+                                <p class="list-group-item-text">{{ member.role }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

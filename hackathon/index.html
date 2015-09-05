@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="connectItApp">
+<head>
+    <title>Connect-It Suisse</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
+
+    <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
+    <link href="bootstrap-material/dist/css/roboto.min.css" rel="stylesheet">
+    <link href="bootstrap-material/dist/css/material.min.css" rel="stylesheet">
+    <link href="bootstrap-material/dist/css/ripples.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="javascript/vendor/timelinejs/css/timeline.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vis.css">
+
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+    <script src="https://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
+    <script src="bootstrap-material/dist/js/material.min.js"></script>
+    <script src="bootstrap-material/dist/js/ripples.min.js"></script>
+    <script src="javascript/vendor/angularjs/angular.min.js"></script>
+    <script src="javascript/vendor/angularjs/angular-resource.min.js"></script>
+    <script src="javascript/vendor/angularjs/angular-route.min.js"></script>
+    <script src="javascript/vendor/bootstrap.min.js"></script>
+    <script src="javascript/vendor/moment.js"></script>
+    <script src="javascript/vendor/timelinejs/js/timeline.js"></script>
+    <script src="javascript/vendor/amcharts/ammap.js"></script>
+    <script src="javascript/vendor/amcharts/worldLow.js"></script>
+    <script src="javascript/vendor/amcharts/none.js"></script>
+    <script src="javascript/vendor/underscore.js"></script>
+
+    <script src="javascript/directives/connectItDirectives.js"></script>
+    <script src="javascript/directives/LocationDirective.js"></script>
+    <script src="javascript/directives/SearchBarDirective.js"></script>
+    <script src="javascript/connectItControllers.js"></script>
+    <script src="javascript/controllers/SearchBarCtrl.js"></script>
+    <script src="javascript/controllers/DepartmentCtrl.js"></script>
+    <script src="javascript/controllers/OfficeCtrl.js"></script>
+    <script src="javascript/controllers/PersonCtrl.js"></script>
+    <script src="javascript/controllers/ProjectCtrl.js"></script>
+    <script src="javascript/controllers/GraphCtrl.js"></script>
+    <script src="javascript/ConnectItApp.js"></script>
+    <script src="javascript/neoResource.js"></script>
+    <script src="javascript/vendor/vis.js"></script>
+    <script src="javascript/vendor/bootstrap-typeahead.js"></script>
+    <script src="javascript/vendor/toastr/toastr.min.js"></script>
+    <script src="javascript/vendor/toastr/toastr.css"></script>
+
+
+
+
+    <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+    </script>
+
+</head>
+
+<body class="background">
+    <!-- Navigation Code -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"  data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/" id="menufont"> <b>ConnectIt Suisse </b></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav" id="navbartext">
+                    <li ><a href="#/">Home</a></li>
+                    <li ><a href="#/graph">Graph Search</a></li>
+                </ul>
+
+                <div class="col-xs-12 col-sm-4 pull-right" id="primary-search-box">
+                        <search id="navBarSearch"></search>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Navigation Bar - -->
+
+
+    <div ng-view></div>
+
+</body>
+</html>
