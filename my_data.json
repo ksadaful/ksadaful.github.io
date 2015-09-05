@@ -1,0 +1,29 @@
+{
+    "timeline":
+    {
+        "headline":"My Timeline",
+        "type":"default",
+		"text":"People say stuff",
+		"startDate":"2012,1,1",
+        "date": [
+            {
+                "startDate":"2012,9,17",
+				"endDate":"2016,6,1",
+                "headline":"University of Hong Kong",
+                "text":"<p>Bachelors of Engineering Computer Science</p>"
+            },
+            {
+                "startDate":"2014,6,26",
+				"endDate":"2015,6,5",
+                "headline":"HSBC",
+                "text":"<p>In true political fashion, his character rattles off common jargon heard from people running for office.</p>"
+            },
+            {
+                "startDate":"2015,6,8",
+                "endDate":"2015,9,5",
+                "headline":"Credit Suisse",
+                "text":"<p>Advanced Execution Services</p>"
+            }
+        ]
+    }
+}
