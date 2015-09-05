@@ -8,9 +8,10 @@
             {
                 "startDate":"2012,9,17",
                 "headline":"University of Hong Kong",
-                "text":"<h4> Joined the Bachelors of Engineering Program</h4>  <h5>Major: Computer Science</h5>",
+                "text":"<h4>Bachelor of Engineering</h4> <h5> Pokfulam Road, Hong Kong </h5> ",
                 "asset":
                 {
+                    "media":" <h5> Computer Science </h5> <p> Current GPA - 3.60 <br> Recepient of the Lee Shau Kee Scholarship</p> ",
                     "thumbnail": "timeline-thumbnails/hku.jpg"
                 }
             },
