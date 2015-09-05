@@ -1,60 +1,93 @@
 {
     "timeline":
     {
-        "headline":"My Timeline",
+        "headline":"Welcome to my timeline",
         "type":"default",
-        "text":"People say stuff",
-        "startDate":"2012,1,1",
+        "startDate":"2012,9,17",
         "date": [
             {
-                "startDate":"2011,2,23",
-                "endDate":"2012,2,6",
-                "headline":"Royal College Curepipe",
-                "text":"<h4>Cambridge A-Level Examination </h4>  ",
+                "startDate":"2012,9,17",
+                "headline":"University of Hong Kong",
+                "text":"<h4> Joined the Bachelors of Engineering Program</h4>  <h5>Major: Computer Science</h5>",
                 "asset":
                 {
-                    "media":"<h4 align=\"left\" > Mathematics: A*  <br> Physics: A* <br> Computing: A <br> French: A <br> General Paper: B </h4>",
-                    "credit":"",
-                    "caption":""
+                    "thumbnail": "timeline-thumbnails/hku.jpg"
                 }
             },
             {
-                "startDate":"2012,9,17",
-                "endDate":"2016,6,1",
-                "headline":"University of Hong Kong",
-                "text":"<h4>Bachelors of Engineering </h4>  <h5> Computer Science</h5>"
+                "startDate":"2013,6,17",
+                "endDate":"2013,7,16",
+                "headline":"Tourism Authority",
+                "text":"<h4>Summer Intern </h4> <h5> Port Louis, Mauritius </h4> ",
+                "asset":
+                {
+                    "media":" <h5> Information Technology Department </h5> <p> Efficiently managed a database system and administrated a network. Provided technical support and assisted in deployment of software. Devised and implemented a database system to improve file tracking and manage file updates. Also assisted in the installation of a fingerprint system and responded to queries from senior management about on-going projects.</p> ",
+                    "thumbnail": "timeline-thumbnails/mta.jpg"
+                }
             },
             {
-                "startDate":"2015,9,2",
-                "endDate":"2015,9,2",
-                "headline":"Credit Suisse APAC Hackathon",
-                "text":"<h4>Bachelors of Engineering </h4>  <h5> Computer Science</h5>"
+                "startDate":"2013,7,18",
+                "endDate":"2013,8,16",
+                "headline":"Mauritius Telecom",
+                "text":"<h4>Summer Intern </h4> <h5> Port Louis, Mauritius </h4> ",
+                "asset":
+                {
+                    "media":" <h5> Business Development Division </h5> <p> Designed and implemented a PIN management and batch printing system using Java and SQL for a mobile payment project named Orange Money. Also responsible for graphic design, testing and system analysis related to other on-going projects including a product launch. Working in a very diverse team enhanced my communication skills, broadened my thinking and allowed me to address problems from different perspectives.</p> ",
+                    "thumbnail": "timeline-thumbnails/orange.png"
+                }
+            },
+            {
+                "startDate":"2014,6,14",
+                "endDate":"2014,6,23",
+                "headline":"Ignite The Dreams",
+                "text":"<h4>Summer Service Trip </h4> <h5> Chongqing, China </h5> ",
+                "asset": {
+                    "media": "<h5> Volunteered as a teacher to teach English and engage into cultural exchange with underprivileged children. Over 500 children participated in the programme that lasted two weeks in Chongqing, China. </h5>",
+                    "thumbnail": "timeline-thumbnails/sst.jpg"
+                }
+
             },
             {
                 "startDate":"2014,6,26",
                 "endDate":"2015,6,5",
                 "headline":"HSBC",
-                "text":"<p>Securities Services IT </p>  <p> Middleware Management </p> ",
+                "text":"<h4> Industrial Placement </h4>  <h5> Tai Kok Tsui, Hong Kong </h4> ",
                 "asset":
                 {
-                    "media":"Responsible for generating test reports for data migration programs and running conversion tests in the user-acceptance testing environment. Developed data validation tools using Java and carried out enhancements on the internal business system. Attended training for AS400, RPG ILE and CL Programming. Published resource usage reports for project managers. Other duties included extensive administrative tasks, checking connections between databases, performing health checks and debugging batch jobs. Acquired business knowledge on securities and post-trading activities. Enhanced the middleware management system to improve and optimize tracking the usage of servers using Java with the Spring framework.",
+                    "media":" <h5>  Securities Services IT <h/5> <p> Responsible for generating test reports for data migration programs and running conversion tests in the user-acceptance testing environment. Developed data validation tools using Java and carried out enhancements on the internal business system. Attended training for AS400, RPG ILE and CL Programming. Published resource usage reports for project managers. Other duties included extensive administrative tasks, checking connections between databases, performing health checks and debugging batch jobs. Acquired business knowledge on securities and post-trading activities. </p>  <h5>  Middleware Management <h/5>  <p> Enhanced the middleware management system to improve and optimize tracking the usage of servers using Java with the Spring framework. </p>",
+                    "thumbnail": "timeline-thumbnails/hsbc.jpg",
                     "credit":"",
                     "caption":""
                 }
-
             },
             {
                 "startDate":"2015,6,8",
                 "endDate":"2015,9,5",
                 "headline":"Credit Suisse Internship",
-                "text":"<h4>Summer Technology Analyst<h4>",
+                "text":"<h4>Summer Technology Analyst<h4> <h5> Austin, Hong Kong</h5>",
                 "asset":
                 {
-                    "media":"<h4> Advanced Execution Services </h4> <p> Migrated an algorithmic trading simulator to a newer generation of the Credit Suisse internal order management system. Discovered and fixed original design issues found in the simulator while also implementing a Market Data. Publisher/Subscriber component to allow the simulator to publish market and quant data to the algorithmic engine. Developed a web-based UI to allow developers to load market data files and perform some trend analysis.</p> <h4> Index Management </h4> <p>Formed part of the Index Management team and developed reliable APIs to process and display information related to stock baskets. </p> ",
+                    "media":"<h5> Advanced Execution Services </h5> <p> Migrated an algorithmic trading simulator to a newer generation of the Credit Suisse internal order management system. Discovered and fixed original design issues found in the simulator while also implementing a Market Data. Publisher/Subscriber component to allow the simulator to publish market and quant data to the algorithmic engine. Developed a web-based UI to allow developers to load market data files and perform some trend analysis.</p> <h5> Index Management </h5> <p>Formed part of the Index Management team and developed reliable APIs to process and display information related to stock baskets. </p> ",
+                    "thumbnail": "timeline-thumbnails/cs.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2015,9,2",
+                "endDate":"2015,9,2",
+                "headline":"Credit Suisse APAC Hackathon",
+                "text":"<h4>Winner of the Hackathon 2015 </h4>  <h5> Austin, Hong Kong</h5>",
+
+                "asset":
+                {
+                    "media":"<h5> Team Neo </h5> <p> This was an internal hackathon by Credit Suisse Application Development Job Family. Technology used in the hackathon project: AngularJS and Neo4j ( Graph Database )</p> ",
+                    "thumbnail": "timeline-thumbnails/cs.jpg",
                     "credit":"",
                     "caption":""
                 }
             }
+
         ]
     }
 }
