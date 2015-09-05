@@ -10,7 +10,13 @@
                 "startDate":"2012,9,17",
                 "endDate":"2016,6,1",
                 "headline":"University of Hong Kong",
-                "text":"<p>Bachelors of Engineering Computer Science</p>"
+                "text":"<p>Bachelors of Engineering Computer Science</p>",
+                "asset":
+                {
+                    "media":"http://youtu.be/f-x8t0JOnVw",
+                    "credit":"",
+                    "caption":""
+                }
             },
             {
                 "startDate":"2014,6,26",

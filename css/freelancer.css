@@ -48,7 +48,6 @@ hr.star-primary {
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
     display: inline-block;
     position: relative;
     top: -.8em;
@@ -63,7 +62,7 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-color: #929292;
+    background-color: #000;
 }
 
 hr.star-primary {
