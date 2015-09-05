@@ -181,7 +181,12 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #929292;
+    background: #8C3939;
+}
+
+section.timeline {
+    color: #fff;
+    background: #fff;
 }
 
 section.success a,
