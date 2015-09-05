@@ -104,6 +104,12 @@ header img {
     margin: 0 auto 20px;
 }
 
+.skills-bar
+{
+    font-size: 15px;
+    text-align: left;
+    padding-left: 10px;
+}
 
 header .intro-text .name {
     display: block;
