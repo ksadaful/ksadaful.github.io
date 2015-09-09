@@ -2,7 +2,6 @@ var mainApp = angular.module("mainApp", ['ngRoute']);
 
 mainApp.config(['$routeProvider',
  function($routeProvider) {
-     debugger;
     $routeProvider.
        when('/homepage', {
           templateUrl: 'html-templates/homepage.html'
