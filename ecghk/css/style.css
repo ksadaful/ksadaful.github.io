@@ -1,0 +1,39 @@
+#intro-section {
+    background: url("../img/intro-section-background.jpg");
+    background-size: cover;
+}
+
+
+
+/*======== ABOUT PAGE STYLING ============*/
+
+#about-page
+{
+    padding-top: 110px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.director-message
+{
+    text-align: justify;
+    font-size: 16px;
+    text-justify: inter-word;
+}
+
+/*========= Bootstrap Modification for navbar ============*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+}
