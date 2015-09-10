@@ -4,9 +4,9 @@
             <h5 align="center">Message from Managing Director</h5>
             <br>
 
-            <div class="director-message">
+            <div class="message">
 
-                <img src="img/managing-director-profile.jpg" align="right" id="mdpicture">
+                <img src="img/managing-director-profile.jpg" align="right" id="mdpicture"> <br>
                 Diversity, collaboration and pro bono work: these are the three pillars of the Eureka Consulting Group.
                 Handpicked from a large range of faculties, our consultants come from diverse backgrounds, which we
                 believe will contribute to the success of each consulting project as a fresh pair of eyes always offers
@@ -50,6 +50,7 @@
 
         </div>
     </div>
+
     <div class="row even-panel">
         <div class="col-lg-12">
             <h4 align="center">Leadership Team</h4>
@@ -71,4 +72,28 @@
             </div>
         </div>
     </div>
+
+    <div class="row odd-panel">
+        <div class="col-lg-12">
+            <h4 align="center">Advisory Board</h4>
+            <br>
+            <div ng-repeat="Person in advisory">
+                <div class="row" ng-if="$even">
+                    <div class="col-xs-12 col-lg-6 leadership-tile">
+                        <img align="center" padding="20px" class="team-member" src="img/profile.png" alt="">
+                        <div class="title-person"> <h6>  {{advisory[$index].Name}} </h6> </div>
+                        <div class="about-person"> {{ advisory[$index].About}} </div>
+                    </div>
+
+                    <div class="col-xs-12 col-lg-6 leadership-tile">
+                        <img align="center" padding="20px" class="team-member" src="img/profile.png" alt="">
+                        <div class="title-person"> <h6> {{advisory[$index+1].Name}} </h6> </div>
+                        <div class="about-person"> {{ advisory[$index+1].About}} </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>

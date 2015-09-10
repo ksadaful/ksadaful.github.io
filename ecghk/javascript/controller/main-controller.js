@@ -10,6 +10,9 @@ mainApp.config(['$routeProvider',
           templateUrl: 'html-templates/about.html',
           controller: 'AboutCtrl'
        }).
+       when('/clients', {
+         templateUrl: 'html-templates/clients.html',
+      }).
        when('/pagenotfound', {
                  templateUrl: 'html-templates/page-not-found.html'
               }).
@@ -28,5 +31,16 @@ mainApp.controller('AboutCtrl', function($scope,  $http) {
            error(function(data, status, headers, config) {
              alert("Could not retrieve data from server!");
            });
+
+       $http.get('website-data/advisory-board.json').
+          success(function(data, status, headers, config) {
+            $scope.advisory = data;
+             console.log (data);
+          }).
+          error(function(data, status, headers, config) {
+            alert("Could not retrieve data from server!");
+          });
+
+          debugger;
 
       });

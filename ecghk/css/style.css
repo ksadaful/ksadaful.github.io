@@ -6,15 +6,18 @@
 .page-template
 {
     padding-top: 120px;
+    padding-bottom: 30px
 }
 
 .even-panel {
     color: #fff;
     background: #FF6A6A;
     padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .odd-panel {
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 
@@ -23,9 +26,9 @@
 
 #mdpicture
 {
-    margin: 30px;
+    margin: 40px;
 }
-.director-message
+.message
 {
     text-align: justify;
     font-size: 16px;
