@@ -1,22 +1,48 @@
-<div class="container-fluid" id="about-page">
-    <div class="row">
+<div class="container-fluid page-template">
+    <div class="row odd-panel">
         <div class="col-lg-12">
-            <h5>Message from Managing Director</h5>
+            <h5 align="center">Message from Managing Director</h5>
             <br>
+
             <div class="director-message">
 
-                <img src="img/managing-director-profile.jpg" align="right"  style="margin:50px" >
-
+                <img src="img/managing-director-profile.jpg" align="right" id="mdpicture">
                 Diversity, collaboration and pro bono work: these are the three pillars of the Eureka Consulting Group.
-                Handpicked from a large range of faculties, our consultants come from diverse backgrounds, which we believe will contribute to the success of each consulting project as a fresh pair of eyes always offers more innovative solutions.
-                At ECG, we provide a platform for passionate students to collaborate with professionals to work towards achieving the same goal: helping the client.
+                Handpicked from a large range of faculties, our consultants come from diverse backgrounds, which we
+                believe will contribute to the success of each consulting project as a fresh pair of eyes always offers
+                more innovative solutions.
+                At ECG, we provide a platform for passionate students to collaborate with professionals to work towards
+                achieving the same goal: helping the client.
 
-                Last but not least, we aim to provide our consulting services pro bono to organizations with social good missions but unfortunately lack the financial means to afford them. The pro bono culture is ingrained in the foundation of ECG and is shared by all our members.
-                As Managing Director, I believe that it is important to give back to society, to actively reach out and help non-profit organizations, and to provide tailored solutions, which have direct social impact on our clients. <br> <br>
-                Our operational model at ECG allows all three parties involved: clients, consultants and mentors (professionals), to benefit from the consulting projects \– or as we call it, our win-win-win model.
-                Experiential learning is a very unique opportunity provided at ECG, specifically targeting students who are willing to learn and develop their soft skills through actual interaction with a client. The responsibilities of carrying out the services are in the hands of the consultants as the lead consultant takes charge and spearheads the whole operation. I believe that it is important to let the consultants take ownership of their own project and give them freedom to derive their own solutions.
-                Our consultants volunteer to dedicate their time to serve our clients pro bono in an intense consulting process of 8-10 weeks. The recruitment process is thus very competitive and we place emphasis on open-mindedness, leadership qualities, passion, creative thinking and excellent language skills. Since the beginning of the second cycle, we have enhanced the unique experiential learning by implementing the Mentorship Programme. Each consulting team is now paired with at least two mentors. This not only opens the door to tackle more challenging issues for the client but also allows the mentors to guide and cultivate their consultants in preparation for their future careers. Similarly, ECG provides the mentors with an avenue to use their expert knowledge to help the clients, and gaining job satisfaction is as an additional bonus. <br> <br>
-                Having witnessed and helping to nourish the journey ECG has undergone since its incorporation, I am honoured to be entrusted the role of Managing Director. I would like to thank my predecessor, Suhail Bindra, for setting up this organization, and for nurturing and building ECG to what it is today. I hope that ECG continues to spread the pro bono culture and inspire the Hong Kong community to dedicating their time and skills to do more social work. With the support from my colleagues, faculty members and professionals, I am confident that our organization will continue to succeed in our upcoming cycles and turn our visions into reality.
+                Last but not least, we aim to provide our consulting services pro bono to organizations with social good
+                missions but unfortunately lack the financial means to afford them. The pro bono culture is ingrained in
+                the foundation of ECG and is shared by all our members.
+                As Managing Director, I believe that it is important to give back to society, to actively reach out and
+                help non-profit organizations, and to provide tailored solutions, which have direct social impact on our
+                clients. <br> <br>
+                Our operational model at ECG allows all three parties involved: clients, consultants and mentors
+                (professionals), to benefit from the consulting projects \– or as we call it, our win-win-win model.
+                Experiential learning is a very unique opportunity provided at ECG, specifically targeting students who
+                are willing to learn and develop their soft skills through actual interaction with a client. The
+                responsibilities of carrying out the services are in the hands of the consultants as the lead consultant
+                takes charge and spearheads the whole operation. I believe that it is important to let the consultants
+                take ownership of their own project and give them freedom to derive their own solutions.
+                Our consultants volunteer to dedicate their time to serve our clients pro bono in an intense consulting
+                process of 8-10 weeks. The recruitment process is thus very competitive and we place emphasis on
+                open-mindedness, leadership qualities, passion, creative thinking and excellent language skills. Since
+                the beginning of the second cycle, we have enhanced the unique experiential learning by implementing the
+                Mentorship Programme. Each consulting team is now paired with at least two mentors. This not only opens
+                the door to tackle more challenging issues for the client but also allows the mentors to guide and
+                cultivate their consultants in preparation for their future careers. Similarly, ECG provides the mentors
+                with an avenue to use their expert knowledge to help the clients, and gaining job satisfaction is as an
+                additional bonus. <br> <br>
+                Having witnessed and helping to nourish the journey ECG has undergone since its incorporation, I am
+                honoured to be entrusted the role of Managing Director. I would like to thank my predecessor, Suhail
+                Bindra, for setting up this organization, and for nurturing and building ECG to what it is today. I hope
+                that ECG continues to spread the pro bono culture and inspire the Hong Kong community to dedicating
+                their time and skills to do more social work. With the support from my colleagues, faculty members and
+                professionals, I am confident that our organization will continue to succeed in our upcoming cycles and
+                turn our visions into reality.
                 <br> <br> <b> Deborah Wong <br>
                 Co-Managing Director <br>
                 The Eureka Consulting Group </b>
@@ -24,9 +50,25 @@
 
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
+    <div class="row even-panel">
+        <div class="col-lg-12">
+            <h4 align="center">Leadership Team</h4>
+            <br>
+            <div ng-repeat="Person in leadership">
+                <div class="row" ng-if="$even">
+                    <div class="col-xs-12 col-lg-6 leadership-tile">
+                        <img align="center" padding="20px" class="team-member" src="img/profile.png" alt="">
+                        <div class="title-person"> <h6>  {{leadership[$index].Name}} &#45; {{leadership[$index].Role}} </h6> </div>
+                        <div class="about-person"> {{ leadership[$index].About}} </div>
+                    </div>
 
+                    <div class="col-xs-12 col-lg-6 leadership-tile">
+                        <img align="center" padding="20px" class="team-member" src="img/profile.png" alt="">
+                        <div class="title-person"> <h6> {{leadership[$index+1].Name}} &#45; {{leadership[$index].Role}} </h6> </div>
+                        <div class="about-person"> {{ leadership[$index+1].About}} </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -7,7 +7,8 @@ mainApp.config(['$routeProvider',
           templateUrl: 'html-templates/homepage.html'
        }).
        when('/about', {
-          templateUrl: 'html-templates/about.html'
+          templateUrl: 'html-templates/about.html',
+          controller: 'AboutCtrl'
        }).
        when('/pagenotfound', {
                  templateUrl: 'html-templates/page-not-found.html'
@@ -16,3 +17,16 @@ mainApp.config(['$routeProvider',
           redirectTo: '/homepage'
        });
  }]);
+
+mainApp.controller('AboutCtrl', function($scope,  $http) {
+
+       $http.get('website-data/leadership-team.json').
+           success(function(data, status, headers, config) {
+             $scope.leadership = data;
+              console.log (data);
+           }).
+           error(function(data, status, headers, config) {
+             alert("Could not retrieve data from server!");
+           });
+
+      });

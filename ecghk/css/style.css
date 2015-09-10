@@ -3,17 +3,32 @@
     background-size: cover;
 }
 
-
-
-/*======== ABOUT PAGE STYLING ============*/
-
-#about-page
+.page-template
 {
     padding-top: 120px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 5px;
+
 }
 
+.even-panel {
+    color: #fff;
+    background: #BFC1C2;
+    padding-top: 30px;
+}
+
+.odd-panel {
+    padding-bottom: 30px;
+}
+
+
+/*======== ABOUT PAGE STYLING ============*/
+
+#mdpicture
+{
+    margin: 20px;
+}
 .director-message
 {
     text-align: justify;
@@ -21,6 +36,22 @@
     text-justify: inter-word;
 }
 
+
+.leadership-tile
+{
+    padding: 20px;
+}
+
+.about-person
+{
+    text-align: justify;
+    font-size: 15px;
+}
+
+.title-person
+{
+    text-align: center;
+}
 /*========= Bootstrap Modification for navbar ============*/
 
 @media (min-width: 768px) and (max-width: 1000px) {
@@ -36,4 +67,18 @@
     .navbar-header {
         float:none;
     }
+}
+
+/*==== overide footer css =====*/
+footer .footer-col {
+    margin-bottom: 20px;
+}
+
+.team-member
+{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
 }
