@@ -5,8 +5,14 @@
 
 .page-template
 {
-    padding-top: 120px;
+    padding-top: 150px;
     padding-bottom: 30px
+}
+
+.first-panel
+{
+    color: #fff;
+    background: #FF6A6A;
 }
 
 .even-panel {

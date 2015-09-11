@@ -12,7 +12,11 @@ mainApp.config(['$routeProvider',
        }).
        when('/clients', {
          templateUrl: 'html-templates/clients.html',
+         controller: 'ClientsCtrl'
       }).
+       when('/join-us', {
+               templateUrl: 'html-templates/join-us.html',
+        }).
        when('/pagenotfound', {
                  templateUrl: 'html-templates/page-not-found.html'
               }).
@@ -21,12 +25,11 @@ mainApp.config(['$routeProvider',
        });
  }]);
 
-mainApp.controller('AboutCtrl', function($scope,  $http) {
+mainApp.controller('AboutCtrl', function($scope,  $http, $window) {
 
        $http.get('website-data/leadership-team.json').
            success(function(data, status, headers, config) {
              $scope.leadership = data;
-              console.log (data);
            }).
            error(function(data, status, headers, config) {
              alert("Could not retrieve data from server!");
@@ -35,12 +38,14 @@ mainApp.controller('AboutCtrl', function($scope,  $http) {
        $http.get('website-data/advisory-board.json').
           success(function(data, status, headers, config) {
             $scope.advisory = data;
-             console.log (data);
           }).
           error(function(data, status, headers, config) {
             alert("Could not retrieve data from server!");
           });
 
-          debugger;
+        $window.scrollTo(0,0);
+});
 
-      });
+mainApp.controller('ClientsCtrl', function($scope,  $http, $window) {
+        $window.scrollTo(0,0);
+});
