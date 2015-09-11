@@ -15,7 +15,8 @@ mainApp.config(['$routeProvider',
          controller: 'ClientsCtrl'
       }).
        when('/join-us', {
-               templateUrl: 'html-templates/join-us.html',
+            templateUrl: 'html-templates/join-us.html',
+            controller: 'JoinUsCtrl'
         }).
        when('/pagenotfound', {
                  templateUrl: 'html-templates/page-not-found.html'
@@ -47,5 +48,9 @@ mainApp.controller('AboutCtrl', function($scope,  $http, $window) {
 });
 
 mainApp.controller('ClientsCtrl', function($scope,  $http, $window) {
+        $window.scrollTo(0,0);
+});
+
+mainApp.controller('JoinUsCtrl', function($scope,  $http, $window) {
         $window.scrollTo(0,0);
 });
