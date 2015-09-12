@@ -63,6 +63,16 @@
         });
     </script>
 
+    <script>
+
+        function ScrollToDiv(id)
+        {
+            $('html, body').animate({ scrollTop: $("#"+id).offset().top-60  }, 2000);
+        }
+
+
+    </script>
+
 </head>
 
 <body id="page-top" class="index" ng-app="mainApp">
@@ -94,11 +104,10 @@
                         <a href="#about">About</a>
                     </li>-->
                     <li class="dropdown">
-                        <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> About Us <span class="caret"></span></a>
+                        <a href="#/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> About Us <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#/about">About Us</a></li>
-                            <li><a href="#/about/Leadership">Leadership Team</a></li>
-                            <li><a href="#/about/Advisory">Advisory</a></li>
+                            <li><a onclick="ScrollToDiv('Leadership')">Leadership Team</a></li>
+                            <li><a onclick="ScrollToDiv('Advisory')">Advisory</a></li>
                         </ul>
                     </li>
                     <li class="page-scroll">
