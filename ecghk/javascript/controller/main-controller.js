@@ -1,15 +1,18 @@
-var mainApp = angular.module("mainApp", ['ngRoute']);
+var mainApp = angular.module('mainApp',['ngResource','ngRoute']);
 
-mainApp.config(['$routeProvider',
- function($routeProvider) {
+mainApp.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
        when('/homepage', {
           templateUrl: 'html-templates/homepage.html'
        }).
-       when('/about', {
+       when('/about/', {
           templateUrl: 'html-templates/about.html',
           controller: 'AboutCtrl'
        }).
+       when('/about/:section', {
+             templateUrl: 'html-templates/about.html',
+             controller: 'AboutCtrl'
+        }).
        when('/clients', {
          templateUrl: 'html-templates/clients.html',
          controller: 'ClientsCtrl'
@@ -26,7 +29,7 @@ mainApp.config(['$routeProvider',
        });
  }]);
 
-mainApp.controller('AboutCtrl', function($scope,  $http, $window) {
+mainApp.controller('AboutCtrl', ['$scope','$routeParams', '$http' , '$window', '$resource', '$timeout' , '$anchorScroll',function($scope, $routeParams, $http, $window, $resource, $timeout, $anchorScroll) {
 
        $http.get('website-data/leadership-team.json').
            success(function(data, status, headers, config) {
@@ -45,12 +48,36 @@ mainApp.controller('AboutCtrl', function($scope,  $http, $window) {
           });
 
         $window.scrollTo(0,0);
-});
 
-mainApp.controller('ClientsCtrl', function($scope,  $http, $window) {
-        $window.scrollTo(0,0);
-});
+        $scope.section = $routeParams.section;
+        if ($scope.section == null) return;
+/*        $element = document.getElementById($scope.section);*/
+        console.log("position of section: " + $('#'+$scope.section).offset().top );
+/*        $('html, body').animate({ scrollTop: $('#'+$scope.section).offset().top }, 'slow');*/
 
-mainApp.controller('JoinUsCtrl', function($scope,  $http, $window) {
+        $timeout(function() {
+            /*$anchorScroll($scope.section);*/
+            $('html, body').animate({ scrollTop: ($('#'+$scope.section).offset().top)-50 }, 'slow');
+        }, 500);
+}]);
+
+mainApp.controller('JoinUsCtrl', ['$scope','$routeParams', '$window',function($scope, $routeParams, $window) {
         $window.scrollTo(0,0);
+}]);
+
+mainApp.controller('ClientsCtrl', ['$scope','$routeParams', '$window',function($scope, $routeParams, $window) {
+        $window.scrollTo(0,0);
+}]);
+
+
+mainApp.directive('scrollOnClick', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, $elm)
+    {
+      $elm.on('click', function() {
+        $("body").animate({scrollTop: $elm.offset().top}, "slow");
+      });
+    }
+  }
 });

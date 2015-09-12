@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,6 +42,27 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script>
+        $(document).ready(function () {
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.scrollup').fadeIn();
+                } else {
+                    $('.scrollup').fadeOut();
+                }
+            });
+
+            $('.scrollup').click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 600);
+                return false;
+            });
+
+        });
+    </script>
+
 </head>
 
 <body id="page-top" class="index" ng-app="mainApp">
@@ -69,8 +90,16 @@
                     <li class="page-scroll">
                         <a href="#portfolio">Home</a>
                     </li>
-                    <li class="page-scroll">
+                   <!-- <li class="page-scroll">
                         <a href="#about">About</a>
+                    </li>-->
+                    <li class="dropdown">
+                        <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> About Us <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#/about">About Us</a></li>
+                            <li><a href="#/about/Leadership">Leadership Team</a></li>
+                            <li><a href="#/about/Advisory">Advisory</a></li>
+                        </ul>
                     </li>
                     <li class="page-scroll">
                         <a href="#clients">Clients</a>
@@ -92,7 +121,7 @@
     </nav>
 
     <div ng-view></div>
-
+    <a href="#" class="scrollup"><span class="glyphicon glyphicon-menu-up"> Up</span></a>
 <!--
     &lt;!&ndash; Header &ndash;&gt;
     <header>
