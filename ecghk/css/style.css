@@ -99,3 +99,17 @@ footer .footer-col {
     background: url('../img/icon_top.png') no-repeat;
 
 }
+
+.home-panel
+{
+    padding: 10px;
+    align: center;
+}
+
+.client-logo
+{
+   width: 250px;
+   height: 250px;
+   align: center;
+   padding: 10px;
+}

@@ -4,7 +4,7 @@ mainApp.config(['$routeProvider','$locationProvider', function($routeProvider, $
     $routeProvider.
        when('/homepage', {
           templateUrl: 'html-templates/homepage.html',
-          controller: 'HometCtrl'
+          controller: 'HomeCtrl'
        }).
        when('/about/', {
           templateUrl: 'html-templates/about.html',
@@ -63,7 +63,19 @@ mainApp.controller('ClientsCtrl', ['$scope','$routeParams', '$window',function($
         $window.scrollTo(0,0);
 }]);
 
-mainApp.controller('HomeCtrl', ['$scope','$routeParams', '$window',function($scope, $routeParams, $window) {
+mainApp.controller('HomeCtrl', ['$scope','$routeParams','$http' , '$window',function($scope, $routeParams,$http , $window) {
+
+         $http.get('website-data/current-clients.json').
+                   success(function(data, status, headers, config) {
+                     $scope.currentClients = data;
+                     console.log($scope.currentClients);
+                   }).
+                   error(function(data, status, headers, config) {
+                     alert("Could not retrieve data from server!");
+                   });
+
+
+
         $window.scrollTo(0,0);
 }]);
 
