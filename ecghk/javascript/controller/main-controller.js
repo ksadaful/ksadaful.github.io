@@ -3,7 +3,8 @@ var mainApp = angular.module('mainApp',['ngResource','ngRoute']);
 mainApp.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
        when('/homepage', {
-          templateUrl: 'html-templates/homepage.html'
+          templateUrl: 'html-templates/homepage.html',
+          controller: 'HometCtrl'
        }).
        when('/about/', {
           templateUrl: 'html-templates/about.html',
@@ -46,17 +47,10 @@ mainApp.controller('AboutCtrl', ['$scope','$routeParams', '$http' , '$window', '
           error(function(data, status, headers, config) {
             alert("Could not retrieve data from server!");
           });
-
         $window.scrollTo(0,0);
-
         $scope.section = $routeParams.section;
         if ($scope.section == null) return;
-/*        $element = document.getElementById($scope.section);*/
-        console.log("position of section: " + $('#'+$scope.section).offset().top );
-/*        $('html, body').animate({ scrollTop: $('#'+$scope.section).offset().top }, 'slow');*/
-
         $timeout(function() {
-            /*$anchorScroll($scope.section);*/
             $('html, body').animate({ scrollTop: ($('#'+$scope.section).offset().top)-50 }, 'slow');
         }, 500);
 }]);
@@ -69,15 +63,7 @@ mainApp.controller('ClientsCtrl', ['$scope','$routeParams', '$window',function($
         $window.scrollTo(0,0);
 }]);
 
+mainApp.controller('HomeCtrl', ['$scope','$routeParams', '$window',function($scope, $routeParams, $window) {
+        $window.scrollTo(0,0);
+}]);
 
-mainApp.directive('scrollOnClick', function() {
-  return {
-    restrict: 'A',
-    link: function(scope, $elm)
-    {
-      $elm.on('click', function() {
-        $("body").animate({scrollTop: $elm.offset().top}, "slow");
-      });
-    }
-  }
-});
