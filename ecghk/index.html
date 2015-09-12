@@ -67,13 +67,15 @@ Date: 12th September 2015
     </script>
 
     <script>
+        function ScrollToDiv(id){  $('html, body').animate({ scrollTop: $("#"+id).offset().top-60  }, 2000); }
 
-        function ScrollToDiv(id)
+        function goToAboutSection(id)
         {
-            $('html, body').animate({ scrollTop: $("#"+id).offset().top-60  }, 2000);
+             if (window.location.href.indexOf('about/') > 0)
+             { ScrollToDiv(id); }
+             else
+             { $(location).attr('href', '#/about/'+id) }
         }
-
-
     </script>
 
 </head>
@@ -103,14 +105,12 @@ Date: 12th September 2015
                     <li class="page-scroll">
                         <a href="#portfolio">Home</a>
                     </li>
-                   <!-- <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>-->
                     <li class="dropdown">
-                        <a href="#/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> About Us <span class="caret"></span></a>
+                        <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> About Us <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a onclick="ScrollToDiv('Leadership')">Leadership Team</a></li>
-                            <li><a onclick="ScrollToDiv('Advisory')">Advisory</a></li>
+                            <li><a  onclick="goToAboutSection('About-Us')"> About Us</a></li>
+                            <li><a  onclick="goToAboutSection('Leadership')" >Leadership Team</a></li>
+                            <li><a  onclick="goToAboutSection('Advisory')" >Advisory</a></li>
                         </ul>
                     </li>
                     <li class="page-scroll">

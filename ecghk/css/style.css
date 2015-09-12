@@ -113,3 +113,15 @@ footer .footer-col {
    align: center;
    padding: 10px;
 }
+
+.client-row
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 979px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+  }
+}

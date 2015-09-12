@@ -66,14 +66,21 @@ mainApp.controller('ClientsCtrl', ['$scope','$routeParams', '$window',function($
 mainApp.controller('HomeCtrl', ['$scope','$routeParams','$http' , '$window',function($scope, $routeParams,$http , $window) {
 
          $http.get('website-data/current-clients.json').
-                   success(function(data, status, headers, config) {
-                     $scope.currentClients = data;
-                     console.log($scope.currentClients);
-                   }).
-                   error(function(data, status, headers, config) {
-                     alert("Could not retrieve data from server!");
-                   });
+               success(function(data, status, headers, config) {
+                 $scope.currentClients = data;
+               }).
+               error(function(data, status, headers, config) {
+                 alert("Could not retrieve data from server!");
+               });
 
+
+           $http.get('website-data/previous-clients.json').
+             success(function(data, status, headers, config) {
+               $scope.previousClients = data;
+             }).
+             error(function(data, status, headers, config) {
+               alert("Could not retrieve data from server!");
+             });
 
 
         $window.scrollTo(0,0);

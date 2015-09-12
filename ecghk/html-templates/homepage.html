@@ -23,7 +23,7 @@
 
             <div class="col-sm-12 col-lg-6 home-panel" align="center">
                 <img class="img-responsive" style="padding: 5px;" src="img/client-icon.png" alt="">
-                <h4 style="letter-spacing: 5px;">Clients</h4>
+                <h4 style="letter-spacing: 5px;">Current Clients</h4>
                 <hr class="star-light ">
                 <div class="message">
                     Eureka Consulting Group is a student-led social enterprise, founded at The University of Hong Kong,
@@ -52,25 +52,56 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12" >
-                <h4 align="center"> Current Clients </h4>
+                <h3 align="center"> Current Clients </h3>
                 <br>
 
-                <div ng-repeat="clients in currentClients" ng-if="$index % 3 == 0" class="row">
+                <div ng-repeat="clients in currentClients" ng-if="$index % 3 == 0" class="row client-row">
 
-                    <div class="col-xs-12 col-lg-4" align="center" padding="10px">
-                        <div class="client-logo"> <img  align="center" src="img/clients-logos/{{currentClients[$index].Name}}.jpg" alt="">    </div>
+                    <div class="col-xs-12 col-lg-4" align="center" padding="10px" ng-if="$index < currentClients.length">
+                        <img  align="center" src="img/clients-logos/{{currentClients[$index].Name}}.png" alt="">
                         <h6>{{currentClients[$index].Name}}    </h6>
                         <div class="message"> {{currentClients[$index].Description}}</div>
                     </div>
-                    <div class="col-xs-12 col-lg-4" align="center" padding="10px">
-                        <div class="client-logo" align="center"> <img  align="center" src="img/clients-logos/{{currentClients[$index + 1].Name}}.jpg" alt=""> </div>
+                    <div class="col-xs-12 col-lg-4" align="center" padding="10px" ng-if="$index+1 < currentClients.length">
+                        <img  align="center" src="img/clients-logos/{{currentClients[$index + 1].Name}}.png" alt="">
                         <h6>{{currentClients[$index + 1].Name}}</h6>
                         <div class="message"> {{currentClients[$index+1].Description}}</div>
                     </div>
-                    <div class="col-xs-12 col-lg-4" align="center" padding="10px">
-                         <div class="client-logo" > <img align="center" src="img/clients-logos/{{currentClients[$index + 2].Name}}.jpg" alt="">  </div>
+                    <div class="col-xs-12 col-lg-4" align="center" padding="10px" ng-if="$index+2 < currentClients.length">
+                        <img align="center" src="img/clients-logos/{{currentClients[$index + 2].Name}}.png" alt="">
                         <h6>{{currentClients[$index + 2].Name}}</h6>
                         <div class="message"> {{currentClients[$index + 2].Description}}</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid odd-panel">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12" >
+                <h3 align="center"> Previous Clients </h3>
+                <br>
+
+                <div ng-repeat="clients in previousClients" ng-if="$index % 3 == 0" class="row client-row">
+
+                    <div class="col-xs-12 col-lg-4" align="center" padding="10px" ng-if="$index < previousClients.length">
+                        <img  align="center" src="img/clients-logos/{{previousClients[$index].Name}}.png" alt="">
+                        <h6>{{previousClients[$index].Name}}    </h6>
+                        <div class="message"> {{previousClients[$index].Description}}</div>
+                    </div>
+                    <div class="col-xs-12 col-lg-4" align="center" padding="10px" ng-if="$index+1 < previousClients.length">
+                        <img  align="center" src="img/clients-logos/{{previousClients[$index + 1].Name}}.png" alt="">
+                        <h6>{{previousClients[$index + 1].Name}}</h6>
+                        <div class="message"> {{previousClients[$index+1].Description}}</div>
+                    </div>
+                    <div class="col-xs-12 col-lg-4" align="center" padding="10px" ng-if="$index+2 < previousClients.length">
+                        <img align="center" src="img/clients-logos/{{previousClients[$index + 2].Name}}.png" alt="">
+                        <h6>{{previousClients[$index + 2].Name}}</h6>
+                        <div class="message"> {{previousClients[$index + 2].Description}}</div>
                     </div>
                 </div>
 
