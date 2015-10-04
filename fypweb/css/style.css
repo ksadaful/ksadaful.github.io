@@ -37,3 +37,19 @@
 .black-text{
     color: #000000;
 }
+
+ .single-feature
+ {
+ 	padding: 60px;
+ }
+
+.description
+{
+    font-size: 16px;
+    text-align: justify;
+}
+
+#gantt
+{
+    background: #fff;
+}
