@@ -1,0 +1,55 @@
+#intro-section
+{
+	
+	background: url("../img/wood.jpg");
+	background-size: cover;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+
+ section.features
+ {
+    background: #fff;
+    color: #000000;
+
+ }
+
+ #timeline
+ {
+ height: 600px;
+ width: 100%;
+ }
+
+ .team-member
+ {
+ 	padding: 20px;
+ }
+
+ #intro-section{
+    color: #000000;
+ }
+
+.black-text{
+    color: #000000;
+}
+
+ .single-feature
+ {
+ 	padding: 20px;
+ }
+
+.description
+{
+    font-size: 16px;
+    text-align: justify;
+}
+
+#gantt
+{
+    background: #fff;
+}
